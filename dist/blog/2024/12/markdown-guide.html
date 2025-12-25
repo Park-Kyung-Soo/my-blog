@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="이 블로그에서 마크다운을 사용하는 방법을 알아봅니다.">
+  <title>마크다운 작성 가이드 | My Blog</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../../../blogfavicon.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="../../../css/style.css">
+  <link rel="stylesheet" href="../../../css/hljs-theme.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <a href="../../../index.html" class="logo">
+        <img src="../../../blogicon.png" alt="블로그 아이콘" class="logo-icon-img">
+        <span class="logo-text">My Blog</span>
+      </a>
+      
+      <nav class="nav">
+        <a href="../../../index.html" class="nav-link">Home</a>
+        <a href="../../../about.html" class="nav-link">About</a>
+        <a href="../../../blog/index.html" class="nav-link">Blog</a>
+      </nav>
+      
+      <button class="theme-toggle" id="themeToggle" aria-label="테마 변경">
+        <span class="theme-icon">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main">
+    <article class="post-container">
+  <!-- Post Header -->
+  <header class="post-header">
+    <div class="post-meta">
+      <a href="../../../category/가이드.html" class="post-category">가이드</a>
+      <time class="post-date">2024년 12월 22일</time>
+    </div>
+    <h1 class="post-title">마크다운 작성 가이드</h1>
+    
+    <p class="post-description">이 블로그에서 마크다운을 사용하는 방법을 알아봅니다.</p>
+    
+    <div class="post-tags">
+      <a href="../../../tag/마크다운.html" class="tag">마크다운</a><a href="../../../tag/가이드.html" class="tag">가이드</a><a href="../../../tag/글쓰기.html" class="tag">글쓰기</a>
+    </div>
+  </header>
+  
+  <!-- Post Content -->
+  <div class="post-content prose">
+    <h1>마크다운 작성 가이드</h1>
+<p>이 글에서는 블로그에서 마크다운을 사용하는 방법을 설명합니다.</p>
+<h2>제목 (Headings)</h2>
+<pre><code class="hljs language-markdown"><span class="hljs-section"># H1 제목</span>
+<span class="hljs-section">## H2 제목</span>
+<span class="hljs-section">### H3 제목</span>
+<span class="hljs-section">#### H4 제목</span>
+</code></pre><h2>텍스트 스타일</h2>
+<ul>
+<li><strong>굵은 글씨</strong>: <code>**텍스트**</code></li>
+<li><em>기울임</em>: <code>*텍스트*</code></li>
+<li><del>취소선</del>: <code>~~텍스트~~</code></li>
+<li><code>인라인 코드</code>: `코드`</li>
+</ul>
+<h2>목록</h2>
+<h3>순서 없는 목록</h3>
+<ul>
+<li>항목 1</li>
+<li>항목 2<ul>
+<li>중첩 항목 2-1</li>
+<li>중첩 항목 2-2</li>
+</ul>
+</li>
+<li>항목 3</li>
+</ul>
+<h3>순서 있는 목록</h3>
+<ol>
+<li>첫 번째</li>
+<li>두 번째</li>
+<li>세 번째</li>
+</ol>
+<h2>링크와 이미지</h2>
+<pre><code class="hljs language-markdown">[<span class="hljs-string">링크 텍스트</span>](<span class="hljs-link">https://example.com</span>)
+![<span class="hljs-string">이미지 설명</span>](<span class="hljs-link">이미지경로.jpg</span>)
+</code></pre><h2>표 (Table)</h2>
+<table>
+<thead>
+<tr>
+<th>이름</th>
+<th>나이</th>
+<th>직업</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>홍길동</td>
+<td>25</td>
+<td>개발자</td>
+</tr>
+<tr>
+<td>김철수</td>
+<td>30</td>
+<td>디자이너</td>
+</tr>
+<tr>
+<td>이영희</td>
+<td>28</td>
+<td>기획자</td>
+</tr>
+</tbody></table>
+<h2>코드 블록</h2>
+<p>여러 언어를 지원합니다:</p>
+<pre><code class="hljs language-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;ko&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>예시<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello World<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre><pre><code class="hljs language-css"><span class="hljs-selector-class">.container</span> {
+  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">720px</span>;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> auto;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">2rem</span>;
+}
+</code></pre><h2>수평선</h2>
+<p>세 개 이상의 <code>-</code>, <code>*</code>, <code>_</code>로 수평선을 만듭니다:</p>
+<hr>
+<h2>체크박스</h2>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 완료된 항목</li>
+<li><input disabled="" type="checkbox"> 미완료 항목</li>
+<li><input disabled="" type="checkbox"> 또 다른 항목</li>
+</ul>
+<p>이제 마크다운으로 멋진 글을 작성해보세요! ✨</p>
+
+  </div>
+  
+  <!-- Post Footer -->
+  <footer class="post-footer">
+    <!-- Navigation -->
+    <nav class="post-nav">
+      
+      
+      <a href="../../../blog/2024/12/hello-world.html" class="post-nav-link post-nav-next">
+        <span class="post-nav-label">다음 글 →</span>
+        <span class="post-nav-title">블로그에 오신 것을 환영합니다</span>
+      </a>
+      
+    </nav>
+  </footer>
+</article>
+
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <p class="footer-text">© 2025 My Blog. All rights reserved.</p>
+      <p class="footer-powered">Powered by Custom Static Site Generator</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // 다크모드 토글
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = themeToggle.querySelector('.theme-icon');
+    
+    // 저장된 테마 또는 시스템 설정 확인
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      document.body.classList.add('dark');
+      themeIcon.textContent = '☀️';
+    }
+    
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      const isDark = document.body.classList.contains('dark');
+      themeIcon.textContent = isDark ? '☀️' : '🌙';
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+  </script>
+</body>
+</html>
+
+

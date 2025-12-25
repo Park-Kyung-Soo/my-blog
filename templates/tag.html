@@ -1,0 +1,26 @@
+<div class="archive-container">
+  <header class="archive-header">
+    <span class="archive-label">태그</span>
+    <h1 class="archive-title">#{{name}}</h1>
+    <p class="archive-count">{{count}}개의 포스트</p>
+  </header>
+  
+  <div class="posts-list">
+    {{#each posts}}
+    <article class="post-item">
+      <div class="post-item-meta">
+        <time class="post-item-date">{{dateFormatted}}</time>
+        <span class="post-item-category">{{category}}</span>
+      </div>
+      <h2 class="post-item-title">
+        <a href="{{basePath}}blog/{{year}}/{{month}}/{{slug}}.html">{{title}}</a>
+      </h2>
+    </article>
+    {{/each}}
+  </div>
+  
+  <div class="archive-back">
+    <a href="{{basePath}}blog/index.html" class="btn btn-secondary">← 블로그로 돌아가기</a>
+  </div>
+</div>
+

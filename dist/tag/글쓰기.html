@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{description}}">
+  <title>태그: 글쓰기 | My Blog</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../blogfavicon.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/hljs-theme.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <a href="../index.html" class="logo">
+        <img src="../blogicon.png" alt="블로그 아이콘" class="logo-icon-img">
+        <span class="logo-text">My Blog</span>
+      </a>
+      
+      <nav class="nav">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../about.html" class="nav-link">About</a>
+        <a href="../blog/index.html" class="nav-link">Blog</a>
+      </nav>
+      
+      <button class="theme-toggle" id="themeToggle" aria-label="테마 변경">
+        <span class="theme-icon">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main">
+    <div class="archive-container">
+  <header class="archive-header">
+    <span class="archive-label">태그</span>
+    <h1 class="archive-title">#글쓰기</h1>
+    <p class="archive-count">1개의 포스트</p>
+  </header>
+  
+  <div class="posts-list">
+    
+    <article class="post-item">
+      <div class="post-item-meta">
+        <time class="post-item-date">2024년 12월 22일</time>
+        <span class="post-item-category">가이드</span>
+      </div>
+      <h2 class="post-item-title">
+        <a href="../blog/2024/12/markdown-guide.html">마크다운 작성 가이드</a>
+      </h2>
+    </article>
+    
+  </div>
+  
+  <div class="archive-back">
+    <a href="../blog/index.html" class="btn btn-secondary">← 블로그로 돌아가기</a>
+  </div>
+</div>
+
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <p class="footer-text">© 2025 My Blog. All rights reserved.</p>
+      <p class="footer-powered">Powered by Custom Static Site Generator</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // 다크모드 토글
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = themeToggle.querySelector('.theme-icon');
+    
+    // 저장된 테마 또는 시스템 설정 확인
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      document.body.classList.add('dark');
+      themeIcon.textContent = '☀️';
+    }
+    
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      const isDark = document.body.classList.contains('dark');
+      themeIcon.textContent = isDark ? '☀️' : '🌙';
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+  </script>
+</body>
+</html>
+
+

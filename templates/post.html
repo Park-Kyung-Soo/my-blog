@@ -1,0 +1,41 @@
+<article class="post-container">
+  <!-- Post Header -->
+  <header class="post-header">
+    <div class="post-meta">
+      <a href="{{categoryUrl}}" class="post-category">{{category}}</a>
+      <time class="post-date">{{dateFormatted}}</time>
+    </div>
+    <h1 class="post-title">{{title}}</h1>
+    {{#if description}}
+    <p class="post-description">{{description}}</p>
+    {{/if}}
+    <div class="post-tags">
+      {{tagsHtml}}
+    </div>
+  </header>
+  
+  <!-- Post Content -->
+  <div class="post-content prose">
+    {{html}}
+  </div>
+  
+  <!-- Post Footer -->
+  <footer class="post-footer">
+    <!-- Navigation -->
+    <nav class="post-nav">
+      {{#if hasPrev}}
+      <a href="{{prevPostUrl}}" class="post-nav-link post-nav-prev">
+        <span class="post-nav-label">← 이전 글</span>
+        <span class="post-nav-title">{{prevPostTitle}}</span>
+      </a>
+      {{/if}}
+      {{#if hasNext}}
+      <a href="{{nextPostUrl}}" class="post-nav-link post-nav-next">
+        <span class="post-nav-label">다음 글 →</span>
+        <span class="post-nav-title">{{nextPostTitle}}</span>
+      </a>
+      {{/if}}
+    </nav>
+  </footer>
+</article>
+

@@ -1,0 +1,83 @@
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <h1 class="hero-title">
+      <span class="hero-greeting">안녕하세요,</span>
+      <span class="hero-name">개발 블로그입니다</span>
+    </h1>
+    <p class="hero-description">
+      개발과 일상을 기록하고 공유하는 공간입니다.<br>
+      다양한 주제의 글들을 만나보세요.
+    </p>
+    <div class="hero-actions">
+      <a href="{{basePath}}blog/index.html" class="btn btn-primary">블로그 보기</a>
+      <a href="{{basePath}}about.html" class="btn btn-secondary">더 알아보기</a>
+    </div>
+  </div>
+  <div class="hero-decoration">
+    <div class="floating-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Recent Posts -->
+<section class="section">
+  <div class="section-header">
+    <h2 class="section-title">최근 포스트</h2>
+    <a href="{{basePath}}blog/index.html" class="section-link">전체 보기 →</a>
+  </div>
+  
+  <div class="post-grid">
+    {{#each posts}}
+    <article class="post-card">
+      <div class="post-card-content">
+        <div class="post-card-meta">
+          <span class="post-card-category">{{category}}</span>
+          <span class="post-card-date">{{dateFormatted}}</span>
+        </div>
+        <h3 class="post-card-title">
+          <a href="{{basePath}}blog/{{year}}/{{month}}/{{slug}}.html">{{title}}</a>
+        </h3>
+        <p class="post-card-excerpt">{{excerpt}}</p>
+        <div class="post-card-tags">
+          {{tagsHtml}}
+        </div>
+      </div>
+    </article>
+    {{/each}}
+  </div>
+</section>
+
+<!-- Categories & Tags -->
+<section class="section section-sidebar">
+  <div class="sidebar-grid">
+    <!-- Categories -->
+    <div class="sidebar-widget">
+      <h3 class="widget-title">카테고리</h3>
+      <ul class="category-list">
+        {{#each categories}}
+        <li>
+          <a href="{{basePath}}{{url}}" class="category-link">
+            <span class="category-name">{{name}}</span>
+            <span class="category-count">{{count}}</span>
+          </a>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+    
+    <!-- Tags -->
+    <div class="sidebar-widget">
+      <h3 class="widget-title">태그</h3>
+      <div class="tag-cloud">
+        {{#each tags}}
+        <a href="{{basePath}}{{url}}" class="tag">{{name}}</a>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</section>
+

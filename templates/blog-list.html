@@ -1,0 +1,45 @@
+<div class="blog-container">
+  <header class="page-header">
+    <h1 class="page-title">Blog</h1>
+    <p class="page-description">모든 포스트를 둘러보세요</p>
+  </header>
+  
+  <div class="blog-layout">
+    <!-- Posts List -->
+    <div class="posts-list">
+      {{#each posts}}
+      <article class="post-item">
+        <div class="post-item-meta">
+          <time class="post-item-date">{{dateFormatted}}</time>
+          <a href="{{basePath}}category/{{category}}.html" class="post-item-category">{{category}}</a>
+        </div>
+        <h2 class="post-item-title">
+          <a href="{{basePath}}blog/{{year}}/{{month}}/{{slug}}.html">{{title}}</a>
+        </h2>
+        <p class="post-item-excerpt">{{excerpt}}</p>
+        <div class="post-item-tags">
+          {{tagsHtml}}
+        </div>
+      </article>
+      {{/each}}
+    </div>
+    
+    <!-- Sidebar -->
+    <aside class="blog-sidebar">
+      <div class="sidebar-widget">
+        <h3 class="widget-title">📅 아카이브</h3>
+        <ul class="archive-list">
+          {{#each archives}}
+          <li>
+            <a href="{{basePath}}{{url}}" class="archive-link">
+              <span>{{label}}</span>
+              <span class="archive-count">{{count}}</span>
+            </a>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </aside>
+  </div>
+</div>
+
